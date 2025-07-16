@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <h1>Click to reveal a secret</h1>
+  <h1>Click to known about my secret</h1>
   <button onclick="toggleSecret()">Reveal/Hide</button>
   <button onclick="updateSecret()">Update</button>
   <button onclick="deleteSecret()">Delete</button>
 
-  <p id="secret" style="display: none; color: red; font-weight: bold;">
-    You found the message
+  <p id="secret" style="display: none; color: blueviolet; font-weight: bold; font-style: italic;">
+    i have a secret for uh 
   </p>
 
   <script>
@@ -30,7 +30,7 @@
     function updateSecret() {
       const secret = document.getElementById('secret');
       if (secret) {
-        secret.innerText = 'This is the updated secret message!';
+        secret.innerText = 'here is the update about my secret is -: i known AI';
       }
     }
 
