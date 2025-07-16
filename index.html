@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Click to reveal a secret</h1>
+  <button onclick="toggleSecret()">Reveal/Hide</button>
+  <button onclick="updateSecret()">Update</button>
+  <button onclick="deleteSecret()">Delete</button>
+
+  <p id="secret" style="display: none; color: red; font-weight: bold;">
+    You found the message
+  </p>
+
+  <script>
+    function toggleSecret() {
+      const secret = document.getElementById('secret');
+      if (secret && secret.style.display === 'none') {
+        secret.style.display = 'block';
+      } else if (secret) {
+        secret.style.display = 'none';
+      }
+    }
+
+    function updateSecret() {
+      const secret = document.getElementById('secret');
+      if (secret) {
+        secret.innerText = 'This is the updated secret message!';
+      }
+    }
+
+    function deleteSecret() {
+      const secret = document.getElementById('secret');
+      if (secret) {
+        secret.remove(); // Deletes the element from the DOM
+      }
+    }
+  </script>
+
+</body>
+</html>
